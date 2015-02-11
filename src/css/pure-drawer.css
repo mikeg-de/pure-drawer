@@ -7,6 +7,45 @@
 html, body {
   height: 100%; }
 
+ul {list-style: none; margin: 0; padding: 0}
+
+nav a { 
+  color: #fff;
+  display: block;
+  line-height: 2.75em;
+  padding: 0 .5em 0 1em;
+  text-decoration: none;}
+
+nav a:hover {text-decoration: underline;background-color: #5C809D;}
+
+nav > ul {margin: 2.5em 0 0;}
+
+nav ul ul {
+  background-color: #5C809D;
+  max-height: 0;
+  opacity:0;
+  overflow: hidden;
+  visibility:hidden;
+  -webkit-transition: visibility .1s ease-out .1s, opacity .1s ease-out .1s, max-height .5s ease-out;
+  -moz-transition: visibility .1s ease-out .1s, opacity .1s ease-out .1s, max-height .5s ease-out;
+  -ms-transition: visibility .1s ease-out .1s, opacity .1s ease-out .1s, max-height .5s ease-out;
+  -o-transition: visibility .1s ease-out .1s, opacity .1s ease-out .1s, max-height .5s ease-out;
+  transition: visibility .25s ease-out .25s, opacity .25s ease-out .25s, max-height .5s ease-out;
+  margin: 0 0 0 1em;
+}
+
+nav li:hover > ul, nav li:focus > ul, nav li:active > ul {
+  max-height: 2000px;
+  opacity:1;
+  visibility:visible;
+
+  -webkit-transition: visibility .25s ease-in, opacity .25s ease-in, max-height .5s ease-in;
+  -moz-transition: visibility .25s ease-in, opacity .25s ease-in, max-height .5s ease-in;
+  -ms-transition: visibility .25s ease-in, opacity .25s ease-in, max-height .5s ease-in;
+  -o-transition: visibility .25s ease-in, opacity .25s ease-in, max-height .5s ease-in;
+  transition: visibility .25s ease-in, opacity .25s ease-in, max-height .5s ease-in;
+}
+
 /**************
 ## Container ##
 **************/
@@ -31,14 +70,12 @@ html, body {
   cursor: pointer;
   display: block;
   position: fixed;
-  top: 15px;
+  top: .5em;
   z-index: 99;
   color: #5d809d;
-  width: 70px;
-  height: 70px;
+  width: 2em;
+  height: 2em;
   transition: all 400ms ease-in-out;
-  border: 2px solid #5d809d;
-  border-radius: 50%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -56,8 +93,8 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 4px;
-    width: 35px;
+    height: .2em;
+    width: inherit;
     cursor: pointer;
     background: #5d809d;
     display: block;
@@ -74,7 +111,7 @@ html, body {
     -webkit-transform: translate3d(-50%, 10px, 0); }
 
 .pure-toggle-label[data-toggle-label='left'] {
-  left: 15px;
+  left: 1em;
   right: auto; }
 
 .pure-toggle-label[data-toggle-label='right'] {
