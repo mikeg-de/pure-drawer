@@ -9,8 +9,7 @@
         
         <link rel="stylesheet" href="css/pure-drawer.css"/>
     </head>
-    <body>
-        <div class="pure-container" data-effect="pure-effect-slide">
+    <body class="pure-container" data-effect="pure-effect-slide">
             <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
             <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
             <input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"/>
@@ -59,7 +58,13 @@
             <label class="pure-toggle-label bottom" for="pure-toggle-left-bottom" data-toggle-label="left-bottom"><span class="pure-toggle-icon"></span></label>
             <aside class="pure-drawer bottom" data-position="left-bottom">
                 <ul>
-                    <li>Filter</li>
+                    <li>Filter Radio</li>
+                    <li><input type="radio"> Filter 1</li>
+                    <li><input type="radio"> Filter 2</li>
+                    <li><input type="radio"> Filter 3</li>
+                </ul>
+                <ul>
+                    <li>Filter Checkbox</li>
                     <li><input type="checkbox"> Filter 1</li>
                     <li><input type="checkbox"> Filter 2</li>
                     <li><input type="checkbox"> Filter 3</li>
@@ -67,6 +72,5 @@
             </aside>
 
             <label class="pure-overlay"></label> 
-        </div>
     </body>
 </html>
